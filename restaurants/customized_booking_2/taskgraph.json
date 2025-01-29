@@ -1,0 +1,379 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "name": "MessageWorker",
+                "attribute": {
+                    "value": "Welcome to the Resy Concierge Assistant! I'm here to help you discover the perfect dining experience. Whether you're in the mood for something cozy or looking for a fine dining adventure, let me know your preferences, and I'll find the best restaurant recommendations for you, featuring reviews from The Infatuation. What kind of dining experience are you looking for today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Could you please share your dining preferences, such as cuisine type, ambiance, location, budget, or any special requests?",
+                    "task": "Inquire about the user's dining preferences, such as cuisine type, ambiance, location, budget, and any special requests.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Let's find some great restaurant options based on your preferences and top reviews from The Infatuation.",
+                    "task": "Use the RAGMsgWorker to search for restaurant recommendations based on the user's preferences and The Infatuation's reviews.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Here are some restaurant recommendations for you: [List of restaurants with details].",
+                    "task": "Present the user with a curated list of restaurant recommendations and provide details about each option.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Would you like to see more options, or do you have any other criteria to refine the search?",
+                    "task": "Ask the user if they would like more options or if they have additional criteria to refine the search.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Have you decided on a restaurant? If you're interested, I can also suggest some bars or dessert shops nearby.",
+                    "task": "Confirm the user's selection. Offer to provide bars or dessert shops nearby the restaurant if user is interested in learning about them.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Could you tell me about your past dining experiences and any specific requirements you have?",
+                    "task": "Gather context and preferences from the user about their past dining experiences and specific requirements.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "",
+                    "task": "Access and analyze the user's dining history and preferences using RagMsgWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "",
+                    "task": "Generate a list of customized dining ideas based on the user's preferences and past experiences.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Here are some dining options that match your preferences: [Option A - highlights], [Option B - highlights].",
+                    "task": "Present the curated list of dining options to the user, highlighting how each option meets their preferences.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Do these options meet your expectations, or would you like more suggestions?",
+                    "task": "Seek feedback from the user to refine suggestions or provide more information.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Great choice! Would you like more information about it or any assistance with the next steps?",
+                    "task": "Confirm the user's selection and provide additional information if needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Would you like me to assist with making a reservation or provide directions to the restaurant?",
+                    "task": "Assist with reservation or provide next steps for the user's dining experience.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "name": "DefaultWorker",
+                "attribute": {
+                    "value": "Here are some exciting activities happening at local restaurants, including special menus for restaurant week!",
+                    "task": "Share relevant restaurant activities with user, e.g. restaurant week menus",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "Provide personalized restaurant recommendations for user based on their description",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "6",
+            {
+                "intent": "Brainstorm customized dining ideas for user based on their past dining experiences",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "13",
+            {
+                "intent": "Share relevant restaurant activities with user, e.g. restaurant week menus",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "Resy concierge assistant",
+    "user_objective": "The Resy concierge assistant helps user find restaurants based on the descriptions of the dining experiences they are looking for, focusing on personaliztion and customization. It refers to food reviews published on https://www.theinfatuation.com.",
+    "builder_objective": "The Resy concierge assistant helps to request user's contact information.",
+    "domain": "Food and beverages",
+    "intro": "Dining is as much about the experience as it is about the food - Resy concierge assistant is aimed to help user find the perfect dining experiences. There is a wide selection fo restaurants across the world available on Resy's platform.",
+    "task_docs": [
+        {
+            "source": "https://resy.com",
+            "num": 20
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://resy.com",
+            "num": 20
+        },
+        {
+            "source": "https://www.theinfatuation.com",
+            "num": 20
+        }
+    ],
+    "tasks": [
+        "Provide personalized restaurant recommendations for user based on their description",
+        "Brainstorm customized dining ideas for user based on their past dining experiences",
+        "Share relevant restaurant activities with user, e.g. restaurant week menus"
+    ],
+    "workers": [
+        "RAGWorker",
+        "RagMsgWorker",
+        "MessageWorker",
+        "SearchWorker",
+        "DefaultWorker"
+    ],
+    "nluapi": "http://localhost:55135/nlu/predict",
+    "slotfillapi": "http://localhost:55135/slotfill/predict"
+}

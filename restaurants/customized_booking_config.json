@@ -1,0 +1,31 @@
+{
+    "role": "Resy concierge assistant",
+    "user_objective": "The Resy concierge assistant helps user find restaurants based on the descriptions of the dining experiences they are looking for, focusing on personaliztion and customization. It refers to food reviews published on https://www.theinfatuation.com.",
+    "builder_objective": "The Resy concierge assistant helps to request user's contact information.",
+    "domain": "Food and beverages",
+    "intro": "Dining is as much about the experience as it is about the food - Resy concierge assistant is aimed to help user find the perfect dining experiences. There is a wide selection fo restaurants across the world available on Resy's platform.",
+    "task_docs": [{
+        "source": "https://resy.com",
+        "num": 20
+    }],
+    "rag_docs": [{
+        "source": "https://resy.com",
+        "num": 20
+    },
+    {
+        "source": "https://www.theinfatuation.com",
+        "num":20
+    }],
+    "tasks": [
+        "Provide personalized restaurant recommendations for user based on their description",
+        "Brainstorm customized dining ideas for user based on their past dining experiences",
+        "Share relevant restaurant activities with user, e.g. restaurant week menus"
+    ],
+    "workers": [
+        "RAGWorker",
+        "RagMsgWorker",
+        "MessageWorker",
+        "SearchWorker",
+        "DefaultWorker"
+    ]
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "task_name": "Provide personalized restaurant recommendations for user based on their description",
+        "steps": [
+            "Inquire about the user's dining preferences, such as cuisine type, ambiance, location, budget, and any special requests.",
+            "Use the RAGMsgWorker to search for restaurant recommendations based on the user's preferences and The Infatuation's reviews.",
+            "Present the user with a curated list of restaurant recommendations and provide details about each option.",
+            "Ask the user if they would like more options or if they have additional criteria to refine the search.",
+            "Confirm the user's selection. Offer to provide bars or dessert shops nearby the restaurant if user is interested in learning about them."
+        ]
+    },
+    {
+        "task_name": "Brainstorm customized dining ideas for user based on their past dining experiences",
+        "steps": [
+            "Gather context and preferences from the user about their past dining experiences and specific requirements.",
+            "Access and analyze the user's dining history and preferences using RagMsgWorker.",
+            "Generate a list of customized dining ideas based on the user's preferences and past experiences.",
+            "Present the curated list of dining options to the user, highlighting how each option meets their preferences.",
+            "Seek feedback from the user to refine suggestions or provide more information.",
+            "Confirm the user's selection and provide additional information if needed.",
+            "Assist with reservation or provide next steps for the user's dining experience."
+        ]
+    },
+    {
+        "task_name": "Share relevant restaurant activities with user, e.g. restaurant week menus",
+        "steps": [
+            "Share relevant restaurant activities with user, e.g. restaurant week menus"
+        ]
+    }
+]
